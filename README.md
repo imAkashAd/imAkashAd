@@ -12,7 +12,7 @@ A **Flutter enthusiast** from Bangladesh, passionate about **app development**, 
 
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=imAkashAd&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&access_token=YOUR_TOKEN)
+![](https://github-readme-stats.vercel.app/api?username=imAkashAd&theme=github_dark&include_all_commits=true&hide_border=true)
 
 ![](https://nirzak-streak-stats.vercel.app/?user=imAkashAd&theme=github_dark&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=imAkashAd&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
