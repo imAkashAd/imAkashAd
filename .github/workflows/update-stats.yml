@@ -1,12 +1,9 @@
-# Save this file at: .github/workflows/update-stats.yml
-# in your imAkashAd profile repository
-
 name: Update GitHub Stats SVGs
 
 on:
   schedule:
-    - cron: "0 */8 * * *"   # runs every 8 hours
-  workflow_dispatch:          # lets you trigger it manually too
+    - cron: "0 */8 * * *"
+  workflow_dispatch:
 
 jobs:
   update-stats:
@@ -18,63 +15,44 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # ── GitHub Stats card ──────────────────────────────────────────
       - name: Generate GitHub Stats SVG
-        uses: anuraghazra/github-readme-stats@latest
+        uses: actions/github-script@v7
         with:
-          username: imAkashAd
-          output_file: github-stats.svg
-          args: >
-            --theme=tokyonight
-            --hide_border=true
-            --bg_color=0D1117
-            --title_color=00FFFF
-            --icon_color=00FFFF
-            --text_color=FFFFFF
-            --count_private=true
-            --include_all_commits=true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const https = require('https');
 
-      # ── Top Languages card ─────────────────────────────────────────
-      - name: Generate Top Languages SVG
-        uses: anuraghazra/github-readme-stats@latest
-        with:
-          username: imAkashAd
-          output_file: github-langs.svg
-          type: top-langs
-          args: >
-            --layout=compact
-            --theme=tokyonight
-            --hide_border=true
-            --bg_color=0D1117
-            --title_color=00FFFF
-            --text_color=FFFFFF
-            --langs_count=8
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            function fetchSVG(url) {
+              return new Promise((resolve, reject) => {
+                https.get(url, (res) => {
+                  let data = '';
+                  res.on('data', chunk => data += chunk);
+                  res.on('end', () => resolve(data));
+                }).on('error', reject);
+              });
+            }
 
-      # ── Streak Stats card ──────────────────────────────────────────
-      - name: Generate Streak SVG
-        uses: DenverCoder1/github-readme-streak-stats@main
-        with:
-          user: imAkashAd
-          output_file: github-streak.svg
-          theme: tokyonight-duo
-          hide_border: true
-          background: 0D1117
-          stroke: 00FFFF
-          ring: 00FFFF
-          fire: FF6B35
-          curr_streak_num: FFFFFF
-          side_nums: 58A6FF
-          curr_streak_label: 00FFFF
-          side_labels: 58A6FF
-          dates: 888888
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            const username = 'imAkashAd';
+            const base = 'bg_color=0D1117&title_color=00FFFF&icon_color=00FFFF&text_color=FFFFFF&hide_border=true';
 
-      # ── Commit all generated SVGs back to the repo ─────────────────
+            const statsUrl = `https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&${base}&count_private=true&include_all_commits=true`;
+            const langsUrl = `https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&${base}&langs_count=8`;
+            const streakUrl = `https://streak-stats.demolab.com?user=${username}&theme=tokyonight-duo&hide_border=true&background=0D1117&stroke=00FFFF&ring=00FFFF&fire=FF6B35&currStreakNum=FFFFFF&sideNums=58A6FF&currStreakLabel=00FFFF&sideLabels=58A6FF&dates=888888`;
+
+            console.log('Fetching stats SVG...');
+            const stats = await fetchSVG(statsUrl);
+            fs.writeFileSync('github-stats.svg', stats);
+
+            console.log('Fetching languages SVG...');
+            const langs = await fetchSVG(langsUrl);
+            fs.writeFileSync('github-langs.svg', langs);
+
+            console.log('Fetching streak SVG...');
+            const streak = await fetchSVG(streakUrl);
+            fs.writeFileSync('github-streak.svg', streak);
+
+            console.log('All SVGs generated successfully!');
+
       - name: Commit SVGs
         run: |
           git config user.name "github-actions[bot]"
