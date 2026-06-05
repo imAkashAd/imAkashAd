@@ -62,14 +62,14 @@ Status      : 🟢 Open to opportunities
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 <!-- GitHub Stats Cards Row -->
-<img src="https://github-readme-stats.vercel.app/api?username=imAkashAd&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d0d0d&title_color=00ffff&icon_color=00ffff&text_color=ffffff&border_color=00ffff&count_private=true&include_all_commits=true" height="180" alt="GitHub Stats"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=imAkashAd&show_icons=true&theme=vision-friendly-dark&hide_border=true&bg_color=0d1117&title_color=00ffff&icon_color=00ffff&text_color=ffffff" height="180"/>
 &nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imAkashAd&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d0d0d&title_color=00ffff&text_color=ffffff&border_color=00ffff&include_all_commits=true&count_private=true&langs_count=8" height="180" alt="Top Languages"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=imAkashAd&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ffff&text_color=ffffff" height="180"/>
 
 <br/>
 
 <!-- Streak Stats -->
-<img src="https://nirzak-streak-stats.vercel.app/?user=imAkashAd&theme=dark&hide_border=true&background=0d0d0d&stroke=00ffff&ring=00ffff&fire=ff6b35&currStreakNum=ffffff&sideNums=58a6ff&currStreakLabel=00ffff&sideLabels=58a6ff&dates=888888" width="60%" alt="GitHub Streak"/>
+<img src="https://streak-stats.demolab.com?user=imAkashAd&theme=transparent&hide_border=true&ring=00ffff&fire=00ffff&currStreakLabel=00ffff&sideLabels=58a6ff&currStreakNum=ffffff&sideNums=58a6ff&dates=888888" width="60%"/>
 
 <br/><br/>
 
@@ -79,7 +79,7 @@ Status      : 🟢 Open to opportunities
 <br/>
 
 <!-- Trophies -->
-<img src="https://github-profile-trophy.vercel.app/?username=imAkashAd&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" width="97%" alt="Trophies"/>
+<!-- <img src="https://github-profile-trophy.vercel.app/?username=imAkashAd&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" width="97%" alt="Trophies"/> -->
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
