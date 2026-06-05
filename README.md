@@ -5,7 +5,7 @@
 
 <!-- TYPING ANIMATION -->
 <a href="https://github.com/imAkashAd">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&color=00FFFF&center=true&vCenter=true&width=700&lines=Welcome+to+my+digital+space+%F0%9F%8C%90;Flutter+%26+Mobile+App+Developer;Mastering+Java+%26+Spring+Boot;Software+Engineer+%F0%9F%9A%80;Problem+Solver+%7C+Lifelong+Learner;Clean+Code+is+my+philosophy+%E2%9C%A8" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&color=00FFFF&center=true&vCenter=true&width=700&lines=Welcome+to+my+digital+space;Flutter+%26+Mobile+App+Developer;Mastering+Java+%26+Spring+Boot;Software+Engineer;Problem+Solver+%7C+Lifelong+Learner;Clean+Code+is+my+philosophy" alt="Typing SVG" />
 </a>
 
 <br/>
